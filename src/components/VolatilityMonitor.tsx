@@ -124,7 +124,7 @@ export function VolatilityMonitor() {
       </div>
 
       {/* Graph */}
-      <div className="panel border-glow p-4 relative overflow-hidden scan-line">
+      <div className="panel border-glow p-2 sm:p-4 relative overflow-hidden scan-line">
         <div className="flex items-center justify-between mb-2">
           <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
             ▸ Signal Monitor · {active.label}

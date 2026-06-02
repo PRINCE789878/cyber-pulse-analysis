@@ -137,7 +137,7 @@ export function VolatilityMonitor() {
         </div>
         <svg
           viewBox={`0 0 ${w} ${h}`}
-          className="w-full h-40"
+          className="w-full h-28 sm:h-40"
           preserveAspectRatio="none"
         >
           <defs>

@@ -187,7 +187,7 @@ export function VolatilityMonitor() {
       </div>
 
       {/* Signal strength + digits */}
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="panel border-glow p-4 space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">

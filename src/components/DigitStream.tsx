@@ -28,7 +28,7 @@ export function DigitStream({ latest, history }: DigitStreamProps) {
           );
         })}
       </div>
-      <div className="flex items-center gap-2 justify-center text-xs font-mono text-muted-foreground">
+      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 justify-center text-[10px] sm:text-xs font-mono text-muted-foreground">
         <span className="text-accent">▸ STREAM:</span>
         {history.slice(-12).map((d, i) => (
           <span key={i} className={i === history.slice(-12).length - 1 ? "text-accent text-glow-sm" : ""}>

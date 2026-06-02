@@ -77,15 +77,15 @@ export function VolatilityMonitor() {
   return (
     <section className="panel border-glow p-3 sm:p-7 space-y-4 sm:space-y-6">
       <header className="flex items-center justify-between gap-3 flex-wrap">
-        <div className="flex items-center gap-3">
-          <div className="text-accent animate-float">
-            <RobotIcon size={44} />
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <div className="text-accent animate-float shrink-0">
+            <RobotIcon size={36} />
           </div>
-          <div>
-            <h2 className="text-lg sm:text-xl font-bold text-glow tracking-wider">
+          <div className="min-w-0">
+            <h2 className="text-base sm:text-xl font-bold text-glow tracking-wider truncate">
               VOLATILITY SIGNAL MONITOR
             </h2>
-            <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
+            <p className="text-[10px] sm:text-xs font-mono text-muted-foreground uppercase tracking-widest truncate">
               Live Market Stream · AI Pulse Engine
             </p>
           </div>

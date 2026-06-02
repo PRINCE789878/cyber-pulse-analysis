@@ -96,7 +96,7 @@ export function VolatilityMonitor() {
         </span>
       </header>
 
-      <div className="grid sm:grid-cols-[1fr_auto] gap-3 items-end">
+      <div className="grid grid-cols-[1fr_auto] gap-2 sm:gap-3 items-end">
         <label className="block">
           <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
             ▸ Select Volatility Index

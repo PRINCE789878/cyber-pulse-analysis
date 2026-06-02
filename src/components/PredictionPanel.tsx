@@ -67,8 +67,8 @@ export function PredictionPanel({ mode, title, buttonLabel }: PredictionPanelPro
     <section className="panel border-glow p-3 sm:p-7 space-y-4 sm:space-y-6">
       <header className="flex items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-3">
-          <div className="text-accent animate-float">
-            <RobotIcon size={44} />
+          <div className="text-accent animate-float shrink-0">
+            <RobotIcon size={36} />
           </div>
           <div>
             <h2 className="text-lg sm:text-xl font-bold text-glow tracking-wider">{title}</h2>

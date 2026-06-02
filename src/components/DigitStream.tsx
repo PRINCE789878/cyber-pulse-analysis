@@ -8,13 +8,13 @@ interface DigitStreamProps {
 export function DigitStream({ latest, history }: DigitStreamProps) {
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+      <div className="flex flex-wrap justify-center gap-1.5 sm:gap-3">
         {Array.from({ length: 10 }, (_, d) => {
           const isLatest = d === latest;
           return (
             <div
               key={d}
-              className={`relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border font-mono text-lg sm:text-xl font-bold transition-all duration-300 ${
+              className={`relative flex h-9 w-9 sm:h-14 sm:w-14 items-center justify-center rounded-full border font-mono text-sm sm:text-xl font-bold transition-all duration-300 ${
                 isLatest
                   ? "border-accent bg-accent/20 text-accent text-glow animate-pulse-glow scale-110"
                   : "border-border bg-card text-muted-foreground"
@@ -28,7 +28,7 @@ export function DigitStream({ latest, history }: DigitStreamProps) {
           );
         })}
       </div>
-      <div className="flex items-center gap-2 justify-center text-xs font-mono text-muted-foreground">
+      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 justify-center text-[10px] sm:text-xs font-mono text-muted-foreground">
         <span className="text-accent">▸ STREAM:</span>
         {history.slice(-12).map((d, i) => (
           <span key={i} className={i === history.slice(-12).length - 1 ? "text-accent text-glow-sm" : ""}>

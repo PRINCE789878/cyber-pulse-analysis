@@ -75,17 +75,17 @@ export function VolatilityMonitor() {
   );
 
   return (
-    <section className="panel border-glow p-5 sm:p-7 space-y-6">
+    <section className="panel border-glow p-3 sm:p-7 space-y-4 sm:space-y-6">
       <header className="flex items-center justify-between gap-3 flex-wrap">
-        <div className="flex items-center gap-3">
-          <div className="text-accent animate-float">
-            <RobotIcon size={44} />
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <div className="text-accent animate-float shrink-0">
+            <RobotIcon size={36} />
           </div>
-          <div>
-            <h2 className="text-lg sm:text-xl font-bold text-glow tracking-wider">
+          <div className="min-w-0">
+            <h2 className="text-base sm:text-xl font-bold text-glow tracking-wider truncate">
               VOLATILITY SIGNAL MONITOR
             </h2>
-            <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
+            <p className="text-[10px] sm:text-xs font-mono text-muted-foreground uppercase tracking-widest truncate">
               Live Market Stream · AI Pulse Engine
             </p>
           </div>
@@ -96,7 +96,7 @@ export function VolatilityMonitor() {
         </span>
       </header>
 
-      <div className="grid sm:grid-cols-[1fr_auto] gap-3 items-end">
+      <div className="grid grid-cols-[1fr_auto] gap-2 sm:gap-3 items-end">
         <label className="block">
           <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
             ▸ Select Volatility Index
@@ -113,18 +113,18 @@ export function VolatilityMonitor() {
             ))}
           </select>
         </label>
-        <div className="panel border-glow px-4 py-2 text-center min-w-[120px]">
-          <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
+        <div className="panel border-glow px-3 py-2 text-center min-w-[80px] sm:min-w-[120px]">
+          <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
             Volatility
           </div>
-          <div className="text-2xl font-display font-bold text-accent text-glow">
+          <div className="text-lg sm:text-2xl font-display font-bold text-accent text-glow">
             {active.vol}%
           </div>
         </div>
       </div>
 
       {/* Graph */}
-      <div className="panel border-glow p-4 relative overflow-hidden scan-line">
+      <div className="panel border-glow p-2 sm:p-4 relative overflow-hidden scan-line">
         <div className="flex items-center justify-between mb-2">
           <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
             ▸ Signal Monitor · {active.label}
@@ -137,7 +137,7 @@ export function VolatilityMonitor() {
         </div>
         <svg
           viewBox={`0 0 ${w} ${h}`}
-          className="w-full h-40"
+          className="w-full h-28 sm:h-40"
           preserveAspectRatio="none"
         >
           <defs>
@@ -187,7 +187,7 @@ export function VolatilityMonitor() {
       </div>
 
       {/* Signal strength + digits */}
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div className="panel border-glow p-4 space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">

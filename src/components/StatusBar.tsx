@@ -10,7 +10,7 @@ export function StatusBar() {
   }, []);
 
   return (
-    <div className="panel border-glow px-4 py-3 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+    <div className="panel border-glow px-3 py-2 sm:px-4 sm:py-3 flex flex-wrap items-center justify-between gap-2 sm:gap-3 text-[10px] sm:text-xs font-mono">
       <div className="flex items-center gap-2 text-success">
         <span className="h-2.5 w-2.5 rounded-full bg-success animate-pulse shadow-[0_0_10px_currentColor]" />
         AI SYSTEM ONLINE

@@ -31,24 +31,24 @@ function Dashboard() {
   };
 
   return (
-    <main className="min-h-screen px-4 py-6 sm:px-8 sm:py-10 max-w-6xl mx-auto space-y-6">
-      <header className="panel border-glow p-5 sm:p-6 flex items-center justify-between gap-4 flex-wrap">
-        <div className="flex items-center gap-4">
-          <div className="text-accent animate-float">
-            <RobotIcon size={56} />
+    <main className="min-h-screen px-3 py-4 sm:px-8 sm:py-10 max-w-6xl mx-auto space-y-4 sm:space-y-6">
+      <header className="panel border-glow p-3 sm:p-6 flex items-center justify-between gap-3 flex-wrap">
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-1">
+          <div className="text-accent animate-float shrink-0">
+            <RobotIcon size={40} />
           </div>
-          <div>
-            <h1 className="text-xl sm:text-2xl font-bold text-glow tracking-[0.15em]">
+          <div className="min-w-0">
+            <h1 className="text-base sm:text-2xl font-bold text-glow tracking-[0.1em] sm:tracking-[0.15em] truncate">
               TACTICAL ANALYSIS TOOL
             </h1>
-            <p className="text-xs font-mono text-muted-foreground">
-              Welcome to Tactical Analysis Tool — Deriv Digit AI Suite
+            <p className="text-[10px] sm:text-xs font-mono text-muted-foreground truncate">
+              Deriv Digit AI Suite
             </p>
           </div>
         </div>
         <button
           onClick={handleLogout}
-          className="text-xs font-mono uppercase tracking-widest px-4 py-2 border border-border rounded-md hover:border-accent hover:text-accent transition-colors"
+          className="text-[10px] sm:text-xs font-mono uppercase tracking-widest px-3 py-1.5 sm:px-4 sm:py-2 border border-border rounded-md hover:border-accent hover:text-accent transition-colors shrink-0"
         >
           ▸ Logout
         </button>

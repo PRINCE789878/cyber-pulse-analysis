@@ -75,7 +75,7 @@ export function VolatilityMonitor() {
   );
 
   return (
-    <section className="panel border-glow p-5 sm:p-7 space-y-6">
+    <section className="panel border-glow p-3 sm:p-7 space-y-4 sm:space-y-6">
       <header className="flex items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-3">
           <div className="text-accent animate-float">

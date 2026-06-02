@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { RobotIcon } from "@/components/RobotIcon";
 import { PredictionPanel } from "@/components/PredictionPanel";
 import { StatusBar } from "@/components/StatusBar";
+import { VolatilityMonitor } from "@/components/VolatilityMonitor";
 import { authStore } from "@/lib/auth-store";
 
 export const Route = createFileRoute("/dashboard")({
@@ -54,6 +55,8 @@ function Dashboard() {
       </header>
 
       <StatusBar />
+
+      <VolatilityMonitor />
 
       <PredictionPanel
         mode="matches"

@@ -1,0 +1,14 @@
+/* SPA fallback: all routes serve index.html so React Router handles them */
+/*    from    to             status  */
+/*    ----    --             ------  */
+/*  exact files first                       */
+/assets/*    /assets/:splat   200
+/*.js        /:file           200
+/*.css       /:file           200
+/*.png       /:file           200
+/*.jpg       /:file           200
+/*.svg       /:file           200
+/*.ico       /:file           200
+/*.json      /:file           200
+/*.woff2     /:file           200
+/*            /index.html       200

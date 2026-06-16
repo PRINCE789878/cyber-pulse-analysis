@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>HT EA Mobile — Algo Trading Console</title>
+    <meta
+      name="description"
+      content="HT PRO MOBILE — Viking-powered algorithmic trading console with broker connection and session control."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="hte-root">
+      <div class="hte-bg" aria-hidden="true"></div>
+      <div class="hte-vignette" aria-hidden="true"></div>
+
+      <div class="hte-shell">
+        <!-- Phase 1: Loading -->
+        <section id="phase-loading" class="hte-loading">
+          <div class="hte-viking float">
+            <img
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80"
+              alt="Viking with glowing robotic eyes"
+            />
+            <div class="hte-eye left"></div>
+            <div class="hte-eye right"></div>
+          </div>
+          <h1 class="hte-brand">HT EA MOBILE</h1>
+          <p class="hte-sub">Initializing algorithmic core…</p>
+          <div class="hte-progress">
+            <div id="progress-fill" class="hte-progress-fill" style="width: 0%"></div>
+          </div>
+          <div id="progress-pct" class="hte-progress-pct">0%</div>
+        </section>
+
+        <!-- Phase 2: Login -->
+        <section id="phase-login" class="hte-card fade-in" hidden>
+          <div class="hte-viking sm float">
+            <img
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80"
+              alt="Viking"
+            />
+            <div class="hte-eye left"></div>
+            <div class="hte-eye right"></div>
+          </div>
+          <h2 class="hte-brand sm">HT EA MOBILE</h2>
+          <p class="hte-tag">Authenticate to access the bot</p>
+          <form id="login-form" class="hte-form" novalidate>
+            <label class="hte-label" for="login-username">Username</label>
+            <input
+              id="login-username"
+              class="hte-input"
+              placeholder="Enter Username"
+              autocomplete="username"
+            />
+            <label class="hte-label" for="login-password">Password</label>
+            <input
+              id="login-password"
+              class="hte-input"
+              type="password"
+              placeholder="Enter Password"
+              autocomplete="current-password"
+            />
+            <div id="login-error" class="hte-error" hidden></div>
+            <button class="hte-btn primary" type="submit">LOGIN</button>
+            <button id="get-access" class="hte-btn access" type="button">
+              GET ACCESS FOR 250 USD
+            </button>
+          </form>
+        </section>
+
+        <!-- Phase 3: Dashboard -->
+        <section id="phase-dashboard" class="hte-dash fade-in" hidden>
+          <header class="hte-dash-header">
+            <div>
+              <h1 class="hte-brand sm">HT PRO MOBILE</h1>
+              <span class="hte-pill">● LIVE</span>
+            </div>
+            <button id="logout-btn" class="hte-logout">Exit</button>
+          </header>
+
+          <div class="hte-block">
+            <div class="hte-row">
+              <span class="hte-label">Connect to Just Market Broker</span>
+              <button
+                id="broker-toggle"
+                class="hte-toggle"
+                aria-label="Toggle broker"
+                aria-pressed="false"
+              >
+                <span class="knob"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hte-block">
+            <label class="hte-label" for="login-code">Broker Login Code</label>
+            <div class="hte-inline">
+              <input
+                id="login-code"
+                class="hte-input"
+                placeholder="e.g. 1024558"
+                inputmode="numeric"
+              />
+              <button id="connect-btn" class="hte-btn primary slim" type="button">
+                Connect
+              </button>
+            </div>
+            <label class="hte-label" for="broker-pw">Broker Password</label>
+            <input
+              id="broker-pw"
+              class="hte-input"
+              type="password"
+              placeholder="Broker Password"
+            />
+            <div id="broker-status" class="hte-status" hidden></div>
+          </div>
+
+          <div class="hte-block">
+            <label class="hte-label" for="account-type">Account Type</label>
+            <select id="account-type" class="hte-input">
+              <option>Real Account</option>
+              <option selected>Demo Account</option>
+            </select>
+          </div>
+
+          <div class="hte-block">
+            <label class="hte-label">Trading Session</label>
+            <div class="hte-seg" id="session-seg">
+              <button class="hte-seg-btn" data-session="Asian" type="button">Asian</button>
+              <button class="hte-seg-btn active" data-session="London" type="button">
+                London
+              </button>
+              <button class="hte-seg-btn" data-session="New York" type="button">
+                New York
+              </button>
+            </div>
+          </div>
+
+          <button id="algo-btn" class="hte-btn algo on" type="button">
+            LAUNCH ALGO TRADING
+          </button>
+        </section>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
